@@ -2,24 +2,53 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
-main {
+
+header {
+    margin: 10px;
+}
+
+.emojis {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    justify-content: center;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 2fr 2fr;
+    gap: 15px;
 }
 
 .emoji {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #222;
     border-radius: 8px;
     padding: 1rem;
-    margin: 10px;
     max-width: 400px;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.emoji a {
+    width: 90%;
+    text-align: left;
+}
+
+.emoji p {
+    text-align: left;
+}
+
+.emoji:nth-child(1) { grid-area: 1 / 1; }
+.emoji:nth-child(2) { grid-area: 1 / 2; }
+.emoji:nth-child(3) { grid-area: 2 / 1; }
+.emoji:nth-child(4) { grid-area: 2 / 2; }
+
 .emoji h2 {
+    order: -1;
     border-bottom: 2px solid #ccc;
+    width: 95%;
+    text-align: left;
 }
 
 .emoji a {
@@ -29,7 +58,6 @@ main {
     padding: 1rem;
     border-radius: 8px;
     display: block;
-    margin-top: 10px;
 }
 
 .icon {
